@@ -1,0 +1,37 @@
+Nothing to build in platform 'ps_xadc_plat'
+
+13:15:50 **** Incremental Build of configuration Debug for project my_xadc ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/myXadcTest.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/myXadcTest.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/sw/ps_xadc_plat/standalone_domain/bspinclude/include -MMD -MP -MF"src/myXadcTest.d" -MT"src/myXadcTest.o" -o "src/myXadcTest.o" "../src/myXadcTest.c"
+../src/myXadcTest.c: In function 'XAdcPolledPrintfExample':
+../src/myXadcTest.c:147:8: warning: unused variable 'MinData' [-Wunused-variable]
+  147 |  float MinData;
+      |        ^~~~~~~
+../src/myXadcTest.c:146:8: warning: unused variable 'MaxData' [-Wunused-variable]
+  146 |  float MaxData;
+      |        ^~~~~~~
+'Finished building: ../src/myXadcTest.c'
+' '
+'Building target: my_xadc.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LE:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/sw/ps_xadc_plat/standalone_domain/bsplib/lib -o "my_xadc.elf"  ./src/myXadcTest.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: my_xadc.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size my_xadc.elf  |tee "my_xadc.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30256	   1152	  22600	  54008	   d2f8	my_xadc.elf
+'Finished building: my_xadc.elf.size'
+' '
+13:16:01 **** Incremental Build of configuration Debug for project my_xadc_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 3414 E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/ps_xadc_plat.xpfm standalone_domain E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc_system/Debug/system.bif
+sdcard_gen --xpfm E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/ps_xadc_plat.xpfm --sys_config ps_xadc_plat --bif E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc_system/Debug/system.bif --no_bitstream --elf E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf,ps7_cortexa9_0
+Running D:/Xilinx/Vitis/2020.2/bin/bootgen  -image E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

@@ -1,0 +1,567 @@
+11:03:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\ZYNQ_7z020\ps_xadc\vitiss\temp_xsdb_launch_script.tcl
+11:03:28 INFO  : Registering command handlers for Vitis TCF services
+11:03:32 INFO  : XSCT server has started successfully.
+11:03:32 INFO  : Platform repository initialization has completed.
+11:03:32 INFO  : Successfully done setting XSCT server connection channel  
+11:03:32 INFO  : plnx-install-location is set to ''
+11:03:32 INFO  : Successfully done query RDI_DATADIR 
+11:03:32 INFO  : Successfully done setting workspace for the tool. 
+11:04:49 INFO  : Result from executing command 'getProjects': ps_xadc_plat
+11:04:49 INFO  : Result from executing command 'getPlatforms': 
+11:08:43 INFO  : Result from executing command 'getProjects': ps_xadc_plat
+11:08:43 INFO  : Result from executing command 'getPlatforms': ps_xadc_plat|E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/ps_xadc_plat.xpfm
+11:08:44 INFO  : Checking for BSP changes to sync application flags for project 'ps_xadc_app'...
+12:06:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:06:20 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:06:20 INFO  : 'jtag frequency' command is executed.
+12:06:20 INFO  : Context for 'APU' is selected.
+12:06:20 INFO  : System reset is completed.
+12:06:23 INFO  : 'after 3000' command is executed.
+12:06:23 INFO  : Context for 'APU' is selected.
+12:06:23 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:06:23 INFO  : 'configparams force-mem-access 1' command is executed.
+12:06:23 INFO  : Context for 'APU' is selected.
+12:06:23 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/_ide/psinit/ps7_init.tcl' is done.
+12:06:23 INFO  : 'ps7_init' command is executed.
+12:06:23 INFO  : 'ps7_post_config' command is executed.
+12:06:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:06:24 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/Debug/ps_xadc_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:06:24 INFO  : 'configparams force-mem-access 0' command is executed.
+12:06:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/Debug/ps_xadc_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:06:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:06:24 INFO  : 'con' command is executed.
+12:06:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:06:24 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\ps_xadc_app_system\_ide\scripts\systemdebugger_ps_xadc_app_system_standalone.tcl'
+12:09:45 INFO  : Disconnected from the channel tcfchan#3.
+12:09:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:09:45 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:09:45 INFO  : 'jtag frequency' command is executed.
+12:09:45 INFO  : Context for 'APU' is selected.
+12:09:45 INFO  : System reset is completed.
+12:09:48 INFO  : 'after 3000' command is executed.
+12:09:49 INFO  : Context for 'APU' is selected.
+12:09:49 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:09:49 INFO  : 'configparams force-mem-access 1' command is executed.
+12:09:49 INFO  : Context for 'APU' is selected.
+12:09:49 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/_ide/psinit/ps7_init.tcl' is done.
+12:09:49 INFO  : 'ps7_init' command is executed.
+12:09:49 INFO  : 'ps7_post_config' command is executed.
+12:09:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:09:49 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/Debug/ps_xadc_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:09:49 INFO  : 'configparams force-mem-access 0' command is executed.
+12:09:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/Debug/ps_xadc_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:09:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:09:49 INFO  : 'con' command is executed.
+12:09:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:09:49 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\ps_xadc_app_system\_ide\scripts\systemdebugger_ps_xadc_app_system_standalone.tcl'
+12:15:25 INFO  : Example project xadcps_polled_printf_example_1 has been created successfully.
+12:16:19 INFO  : Checking for BSP changes to sync application flags for project 'xadcps_polled_printf_example_1'...
+12:17:41 INFO  : Disconnected from the channel tcfchan#4.
+12:17:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:17:42 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:17:42 INFO  : 'jtag frequency' command is executed.
+12:17:42 INFO  : Context for 'APU' is selected.
+12:17:42 INFO  : System reset is completed.
+12:17:45 INFO  : 'after 3000' command is executed.
+12:17:45 INFO  : Context for 'APU' is selected.
+12:17:45 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:17:45 INFO  : 'configparams force-mem-access 1' command is executed.
+12:17:45 INFO  : Context for 'APU' is selected.
+12:17:45 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/_ide/psinit/ps7_init.tcl' is done.
+12:17:45 INFO  : 'ps7_init' command is executed.
+12:17:45 INFO  : 'ps7_post_config' command is executed.
+12:17:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:17:45 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/Debug/ps_xadc_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:17:45 INFO  : 'configparams force-mem-access 0' command is executed.
+12:17:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_app/Debug/ps_xadc_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:17:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:17:46 INFO  : 'con' command is executed.
+12:17:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:17:46 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\ps_xadc_app_system\_ide\scripts\systemdebugger_ps_xadc_app_system_standalone.tcl'
+12:18:51 INFO  : Disconnected from the channel tcfchan#6.
+12:18:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:18:52 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:18:52 INFO  : 'jtag frequency' command is executed.
+12:18:52 INFO  : Context for 'APU' is selected.
+12:18:52 INFO  : System reset is completed.
+12:18:55 INFO  : 'after 3000' command is executed.
+12:18:55 INFO  : Context for 'APU' is selected.
+12:18:55 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:18:55 INFO  : 'configparams force-mem-access 1' command is executed.
+12:18:55 INFO  : Context for 'APU' is selected.
+12:18:55 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/_ide/psinit/ps7_init.tcl' is done.
+12:18:55 INFO  : 'ps7_init' command is executed.
+12:18:55 INFO  : 'ps7_post_config' command is executed.
+12:18:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:18:56 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/Debug/xadcps_polled_printf_example_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:18:56 INFO  : 'configparams force-mem-access 0' command is executed.
+12:18:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/Debug/xadcps_polled_printf_example_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:18:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:18:56 INFO  : 'con' command is executed.
+12:18:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:18:56 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\xadcps_polled_printf_example_1_system\_ide\scripts\systemdebugger_xadcps_polled_printf_example_1_system_standalone.tcl'
+12:29:32 INFO  : Disconnected from the channel tcfchan#7.
+12:29:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:29:32 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:29:32 INFO  : 'jtag frequency' command is executed.
+12:29:32 INFO  : Context for 'APU' is selected.
+12:29:32 INFO  : System reset is completed.
+12:29:35 INFO  : 'after 3000' command is executed.
+12:29:35 INFO  : Context for 'APU' is selected.
+12:29:35 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:29:35 INFO  : 'configparams force-mem-access 1' command is executed.
+12:29:35 INFO  : Context for 'APU' is selected.
+12:29:35 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/_ide/psinit/ps7_init.tcl' is done.
+12:29:36 INFO  : 'ps7_init' command is executed.
+12:29:36 INFO  : 'ps7_post_config' command is executed.
+12:29:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:36 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/Debug/xadcps_polled_printf_example_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:29:36 INFO  : 'configparams force-mem-access 0' command is executed.
+12:29:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/xadcps_polled_printf_example_1/Debug/xadcps_polled_printf_example_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:29:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:36 INFO  : 'con' command is executed.
+12:29:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:29:36 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\xadcps_polled_printf_example_1_system\_ide\scripts\systemdebugger_xadcps_polled_printf_example_1_system_standalone.tcl'
+12:42:41 INFO  : Checking for BSP changes to sync application flags for project 'my_xadc'...
+12:45:57 INFO  : Disconnected from the channel tcfchan#8.
+12:45:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:45:58 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:45:58 INFO  : 'jtag frequency' command is executed.
+12:45:58 INFO  : Context for 'APU' is selected.
+12:45:58 INFO  : System reset is completed.
+12:46:01 INFO  : 'after 3000' command is executed.
+12:46:01 INFO  : Context for 'APU' is selected.
+12:46:01 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:46:01 INFO  : 'configparams force-mem-access 1' command is executed.
+12:46:01 INFO  : Context for 'APU' is selected.
+12:46:01 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+12:46:01 INFO  : 'ps7_init' command is executed.
+12:46:01 INFO  : 'ps7_post_config' command is executed.
+12:46:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:46:02 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:46:02 INFO  : 'configparams force-mem-access 0' command is executed.
+12:46:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:46:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:46:02 INFO  : 'con' command is executed.
+12:46:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:46:02 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+12:48:29 INFO  : Checking for BSP changes to sync application flags for project 'my_xadc'...
+12:49:34 INFO  : Disconnected from the channel tcfchan#10.
+12:49:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:49:35 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:49:35 INFO  : 'jtag frequency' command is executed.
+12:49:35 INFO  : Context for 'APU' is selected.
+12:49:35 INFO  : System reset is completed.
+12:49:38 INFO  : 'after 3000' command is executed.
+12:49:38 INFO  : Context for 'APU' is selected.
+12:49:38 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:49:38 INFO  : 'configparams force-mem-access 1' command is executed.
+12:49:38 INFO  : Context for 'APU' is selected.
+12:49:38 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+12:49:38 INFO  : 'ps7_init' command is executed.
+12:49:38 INFO  : 'ps7_post_config' command is executed.
+12:49:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:49:38 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:49:39 INFO  : 'configparams force-mem-access 0' command is executed.
+12:49:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:49:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:49:39 INFO  : 'con' command is executed.
+12:49:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:49:39 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+12:51:15 INFO  : Disconnected from the channel tcfchan#12.
+12:51:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:51:16 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:51:16 INFO  : 'jtag frequency' command is executed.
+12:51:16 INFO  : Context for 'APU' is selected.
+12:51:16 INFO  : System reset is completed.
+12:51:19 INFO  : 'after 3000' command is executed.
+12:51:19 INFO  : Context for 'APU' is selected.
+12:51:19 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:51:19 INFO  : 'configparams force-mem-access 1' command is executed.
+12:51:19 INFO  : Context for 'APU' is selected.
+12:51:19 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+12:51:19 INFO  : 'ps7_init' command is executed.
+12:51:19 INFO  : 'ps7_post_config' command is executed.
+12:51:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:51:20 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:51:20 INFO  : 'configparams force-mem-access 0' command is executed.
+12:51:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:51:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:51:20 INFO  : 'con' command is executed.
+12:51:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:51:20 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+12:52:16 INFO  : Checking for BSP changes to sync application flags for project 'my_xadc'...
+12:53:02 INFO  : Disconnected from the channel tcfchan#13.
+12:53:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:53:02 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:53:02 INFO  : 'jtag frequency' command is executed.
+12:53:02 INFO  : Context for 'APU' is selected.
+12:53:02 INFO  : System reset is completed.
+12:53:05 INFO  : 'after 3000' command is executed.
+12:53:05 INFO  : Context for 'APU' is selected.
+12:53:05 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+12:53:05 INFO  : 'configparams force-mem-access 1' command is executed.
+12:53:05 INFO  : Context for 'APU' is selected.
+12:53:05 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+12:53:06 INFO  : 'ps7_init' command is executed.
+12:53:06 INFO  : 'ps7_post_config' command is executed.
+12:53:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:53:06 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:53:06 INFO  : 'configparams force-mem-access 0' command is executed.
+12:53:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:53:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:53:06 INFO  : 'con' command is executed.
+12:53:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:53:06 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+13:02:44 INFO  : Checking for BSP changes to sync application flags for project 'my_xadc'...
+13:03:29 INFO  : Disconnected from the channel tcfchan#15.
+13:03:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:03:29 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:03:29 INFO  : 'jtag frequency' command is executed.
+13:03:29 INFO  : Context for 'APU' is selected.
+13:03:29 INFO  : System reset is completed.
+13:03:32 INFO  : 'after 3000' command is executed.
+13:03:32 INFO  : Context for 'APU' is selected.
+13:03:32 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+13:03:32 INFO  : 'configparams force-mem-access 1' command is executed.
+13:03:32 INFO  : Context for 'APU' is selected.
+13:03:32 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+13:03:33 INFO  : 'ps7_init' command is executed.
+13:03:33 INFO  : 'ps7_post_config' command is executed.
+13:03:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:03:33 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:03:33 INFO  : 'configparams force-mem-access 0' command is executed.
+13:03:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:03:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:03:33 INFO  : 'con' command is executed.
+13:03:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:03:33 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+13:04:59 INFO  : Disconnected from the channel tcfchan#17.
+13:04:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:59 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:04:59 INFO  : 'jtag frequency' command is executed.
+13:04:59 INFO  : Context for 'APU' is selected.
+13:05:00 INFO  : System reset is completed.
+13:05:03 INFO  : 'after 3000' command is executed.
+13:05:03 INFO  : Context for 'APU' is selected.
+13:05:03 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+13:05:03 INFO  : 'configparams force-mem-access 1' command is executed.
+13:05:03 INFO  : Context for 'APU' is selected.
+13:05:03 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+13:05:03 INFO  : 'ps7_init' command is executed.
+13:05:03 INFO  : 'ps7_post_config' command is executed.
+13:05:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:03 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:05:03 INFO  : 'configparams force-mem-access 0' command is executed.
+13:05:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:05:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:03 INFO  : 'con' command is executed.
+13:05:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:05:03 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+13:11:16 INFO  : Checking for BSP changes to sync application flags for project 'my_xadc'...
+13:11:53 INFO  : Disconnected from the channel tcfchan#18.
+13:11:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:11:54 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:11:54 INFO  : 'jtag frequency' command is executed.
+13:11:54 INFO  : Context for 'APU' is selected.
+13:11:54 INFO  : System reset is completed.
+13:11:57 INFO  : 'after 3000' command is executed.
+13:11:57 INFO  : Context for 'APU' is selected.
+13:11:57 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+13:11:57 INFO  : 'configparams force-mem-access 1' command is executed.
+13:11:57 INFO  : Context for 'APU' is selected.
+13:11:57 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+13:11:57 INFO  : 'ps7_init' command is executed.
+13:11:57 INFO  : 'ps7_post_config' command is executed.
+13:11:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:11:58 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:11:58 INFO  : 'configparams force-mem-access 0' command is executed.
+13:11:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:11:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:11:58 INFO  : 'con' command is executed.
+13:11:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:11:58 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+13:15:50 INFO  : Checking for BSP changes to sync application flags for project 'my_xadc'...
+13:16:24 INFO  : Disconnected from the channel tcfchan#20.
+13:16:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:16:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:16:24 INFO  : 'jtag frequency' command is executed.
+13:16:24 INFO  : Context for 'APU' is selected.
+13:16:24 INFO  : System reset is completed.
+13:16:27 INFO  : 'after 3000' command is executed.
+13:16:27 INFO  : Context for 'APU' is selected.
+13:16:27 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+13:16:27 INFO  : 'configparams force-mem-access 1' command is executed.
+13:16:27 INFO  : Context for 'APU' is selected.
+13:16:27 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+13:16:27 INFO  : 'ps7_init' command is executed.
+13:16:28 INFO  : 'ps7_post_config' command is executed.
+13:16:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:28 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:16:28 INFO  : 'configparams force-mem-access 0' command is executed.
+13:16:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:16:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:28 INFO  : 'con' command is executed.
+13:16:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:16:28 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+13:16:56 INFO  : Disconnected from the channel tcfchan#22.
