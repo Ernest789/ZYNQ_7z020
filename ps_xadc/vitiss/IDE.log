@@ -565,3 +565,56 @@ con
 
 13:16:28 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
 13:16:56 INFO  : Disconnected from the channel tcfchan#22.
+15:04:51 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\ZYNQ_7z020\ps_xadc\vitiss\temp_xsdb_launch_script.tcl
+15:04:58 INFO  : XSCT server has started successfully.
+15:04:58 INFO  : Successfully done setting XSCT server connection channel  
+15:04:58 INFO  : plnx-install-location is set to ''
+15:04:58 INFO  : Successfully done setting workspace for the tool. 
+15:05:06 INFO  : Platform repository initialization has completed.
+15:05:07 INFO  : Registering command handlers for Vitis TCF services
+15:05:12 INFO  : Successfully done query RDI_DATADIR 
+15:10:15 INFO  : Checking for BSP changes to sync application flags for project 'my_xadc'...
+15:10:33 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa is already opened
+
+15:11:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:11:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:11:25 INFO  : 'jtag frequency' command is executed.
+15:11:25 INFO  : Context for 'APU' is selected.
+15:11:25 INFO  : System reset is completed.
+15:11:28 INFO  : 'after 3000' command is executed.
+15:11:28 INFO  : Context for 'APU' is selected.
+15:11:28 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa'.
+15:11:28 INFO  : 'configparams force-mem-access 1' command is executed.
+15:11:28 INFO  : Context for 'APU' is selected.
+15:11:28 INFO  : Sourcing of 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl' is done.
+15:11:28 INFO  : 'ps7_init' command is executed.
+15:11:28 INFO  : 'ps7_post_config' command is executed.
+15:11:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:28 INFO  : The application 'E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:11:28 INFO  : 'configparams force-mem-access 0' command is executed.
+15:11:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/ps_xadc/vitiss/ps_xadc_plat/export/ps_xadc_plat/hw/ps_xadc_bd_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/ps_xadc/vitiss/my_xadc/Debug/my_xadc.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:11:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:29 INFO  : 'con' command is executed.
+15:11:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:11:29 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\ps_xadc\vitiss\my_xadc_system\_ide\scripts\systemdebugger_my_xadc_system_standalone.tcl'
+15:18:35 INFO  : Disconnected from the channel tcfchan#2.

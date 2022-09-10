@@ -182,7 +182,7 @@ int XAdcPolledPrintfExample(u16 XAdcDeviceId)
 	while(1)
 	{
 
-	printf("%d s\n",sleep_10s);
+	printf("at %d s  ",sleep_10s);
 
 	TempRawData = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_TEMP);
 	TempData = XAdcPs_RawToTemperature(TempRawData);
