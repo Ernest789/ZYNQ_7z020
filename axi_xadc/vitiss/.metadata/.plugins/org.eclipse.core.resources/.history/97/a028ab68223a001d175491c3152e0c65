@@ -1,0 +1,40 @@
+#include "xparameters.h"  // The parameters of peripherals device that exported from a platform
+#include "xadcps.h"  // XADC driver
+#include "xstatus.h"  // Some status constant variables
+#include <iostream>
+#include "xil_printf.h"
+
+// get register address
+#define XADC_DEVICE_ID	XPAR_XADCPS_0_DEVICE_ID
+
+// define some constants to indicate status
+#define XST_SUCCESS  0L
+#define XST_FAILURE  1L
+
+// define XADC mode
+#define XADCPS_SEQ_MODE_SAFE  0
+
+// instantiate a XADC driver
+static XAdcPs xadcInst;
+
+int main()
+{
+	 int status = XST_SUCCESS;
+	 XAdcPs_Config *configPtr;
+	 u32 tempRawData;
+	 float tempData;
+
+	 XAdcPs *xadcInstPtr = &xadcInst;
+
+	 // initialize the XADC driver
+	 configPtr = XAdcPs_LookupConfig(XADC_DEVICE_ID);
+	 if(configPtr == NULL) {return XST_FAILURE;}
+	 XAdcPs_CfgInitialize(xadcInstPtr,configPtr,configPtr->BaseAddress);
+
+	 // Disable the channel sequencer
+	 XAdcPs_SetSequencerMode(xadcInstPtr, XADCPS_SEQ_MODE_SAFE);
+
+	std::cout << "Hello world!" << std::endl;
+	return 0;
+}
+

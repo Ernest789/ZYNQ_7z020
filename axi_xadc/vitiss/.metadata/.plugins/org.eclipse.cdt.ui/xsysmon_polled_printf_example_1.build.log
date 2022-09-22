@@ -1,0 +1,25 @@
+16:10:37 **** Build of configuration Debug for project xsysmon_polled_printf_example_1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/xsysmon_polled_printf_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xsysmon_polled_printf_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/ZYNQ_7z020/axi_xadc/vitiss/axi_xadc_proj/export/axi_xadc_proj/sw/axi_xadc_proj/standalone_domain/bspinclude/include -MMD -MP -MF"src/xsysmon_polled_printf_example.d" -MT"src/xsysmon_polled_printf_example.o" -o "src/xsysmon_polled_printf_example.o" "../src/xsysmon_polled_printf_example.c"
+'Finished building: ../src/xsysmon_polled_printf_example.c'
+' '
+'Building target: xsysmon_polled_printf_example_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LE:/ZYNQ_7z020/axi_xadc/vitiss/axi_xadc_proj/export/axi_xadc_proj/sw/axi_xadc_proj/standalone_domain/bsplib/lib -o "xsysmon_polled_printf_example_1.elf"  ./src/xsysmon_polled_printf_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xsysmon_polled_printf_example_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size xsysmon_polled_printf_example_1.elf  |tee "xsysmon_polled_printf_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30392	   1160	  22600	  54152	   d388	xsysmon_polled_printf_example_1.elf
+'Finished building: xsysmon_polled_printf_example_1.elf.size'
+' '
+
+16:10:42 Build Finished (took 4s.984ms)
+

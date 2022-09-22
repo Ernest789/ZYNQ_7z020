@@ -1,0 +1,7 @@
+/*axi_xadc_proj*/
+the_ROM_image:
+{
+  [bootloader]<axi_xadc_proj/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

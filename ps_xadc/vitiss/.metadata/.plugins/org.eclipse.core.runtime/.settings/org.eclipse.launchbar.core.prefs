@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_ps_xadc_app_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_xadcps_polled_printf_example_1_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_my_xadc_system
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_xadcps_polled_printf_example_1_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_ps_xadc_app_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_my_xadc_system
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_my_xadc_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_ps_xadc_app_system/activeLaunchMode=systemrun

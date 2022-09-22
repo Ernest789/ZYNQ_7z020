@@ -1,0 +1,65 @@
+#include "xparameters.h"  // The parameters of peripherals device that exported from a platform
+#include "xadcps.h"  // XADC driver
+#include <iostream>
+//#include "xil_printf.h"
+
+// get register address
+#define XADC_DEVICE_ID	XPAR_XADCPS_0_DEVICE_ID
+
+// define some constants to indicate status
+#define XST_SUCCESS  0L
+#define XST_FAILURE  1L
+
+// define XADC mode
+#define XADCPS_SEQ_MODE_SAFE  0
+
+//static int XAdcFractionToInt(float FloatNum);
+
+// instantiate a XADC driver
+static XAdcPs xadcInst;
+
+int main()
+{
+	 int status = XST_SUCCESS;
+
+	 XAdcPs *xadcInstPtr = &xadcInst;
+
+	 // initialize the XADC driver
+	 XAdcPs_Config *configPtr;
+	 configPtr = XAdcPs_LookupConfig(XADC_DEVICE_ID);
+	 if(configPtr == NULL) {status = XST_FAILURE;}
+	 XAdcPs_CfgInitialize(xadcInstPtr,configPtr,configPtr->BaseAddress);
+
+	 // configure XADC mode
+	 XAdcPs_SetSequencerMode(xadcInstPtr, XADCPS_SEQ_MODE_SAFE);
+
+	 // read on-chip temperature data from ADC data registers
+	 u32 tempRawData;
+	 tempRawData = XAdcPs_GetAdcData(xadcInstPtr, XADCPS_CH_TEMP);
+	 // transform the data
+	 float tempData;
+	 tempData = XAdcPs_RawToTemperature(tempRawData);
+	 // output data
+	 std::cout << "The Current On-chip Temperature is " << tempData << "centigrate." << std::endl;
+
+	return status;
+}
+
+// Notes:The xil_printf function does not support the printing of floating point numbers.
+/*
+ * Refer to the following example to output floating point numbers with xil_printf.
+ *
+(1) xil_printf("The Current VCCPDDRO is %0d.%03d Volts. \r\n",(int)(tempData), XAdcFractionToInt(tempData));
+(2) int XAdcFractionToInt(float FloatNum)
+{
+	float Temp;
+
+	Temp = FloatNum;
+	if (FloatNum < 0) {
+		Temp = -(FloatNum);
+	}
+
+	return( ((int)((Temp -(float)((int)Temp)) * (1000.0f))));
+}
+*/
+

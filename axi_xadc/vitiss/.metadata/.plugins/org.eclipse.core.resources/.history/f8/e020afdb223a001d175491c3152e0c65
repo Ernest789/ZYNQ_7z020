@@ -1,0 +1,64 @@
+#include "xparameters.h"  // The parameters of peripherals device that exported from a platform
+#include "xadcps.h"  // XADC driver
+#include "xstatus.h"  // Some status constant variables
+#include <iostream>
+#include "xil_printf.h"
+
+// get register address
+#define XADC_DEVICE_ID	XPAR_XADCPS_0_DEVICE_ID
+
+// define some constants to indicate status
+#define XST_SUCCESS  0L
+#define XST_FAILURE  1L
+
+// define XADC mode
+#define XADCPS_SEQ_MODE_SAFE  0
+// temperature channel register address
+#define XADCPS_CH_TEMP 0X0
+
+static int XAdcFractionToInt(float FloatNum);
+
+// instantiate a XADC driver
+static XAdcPs xadcInst;
+
+int main()
+{
+	 int status = XST_SUCCESS;
+	 XAdcPs_Config *configPtr;
+	 u32 tempRawData;
+	 float tempData;
+
+	 XAdcPs *xadcInstPtr = &xadcInst;
+
+	 // initialize the XADC driver
+	 configPtr = XAdcPs_LookupConfig(XADC_DEVICE_ID);
+	 if(configPtr == NULL) {return XST_FAILURE;}
+	 XAdcPs_CfgInitialize(xadcInstPtr,configPtr,configPtr->BaseAddress);
+
+	 // configure XADC mode
+	 XAdcPs_SetSequencerMode(xadcInstPtr, XADCPS_SEQ_MODE_SAFE);
+
+	 // read on-chip temperature data from ADC data registers
+	 tempRawData = XAdcPs_GetAdcData(xadcInstPtr, XADCPS_CH_TEMP);
+	 // transform the data
+	 tempData = XAdcPs_RawToTemperature(tempRawData);
+	 xil_printf("The Maximum VCCPDDRO is %0d.%03d Volts. \r\n",
+		(int)(MaxData), XAdcFractionToInt(MaxData));
+
+
+	std::cout << "Hello world!" << std::endl;
+	return 0;
+}
+
+int XAdcFractionToInt(float FloatNum)
+{
+	float Temp;
+
+	Temp = FloatNum;
+	if (FloatNum < 0) {
+		Temp = -(FloatNum);
+	}
+
+	return( ((int)((Temp -(float)((int)Temp)) * (1000.0f))));
+}
+

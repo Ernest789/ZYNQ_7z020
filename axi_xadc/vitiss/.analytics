@@ -1,0 +1,44 @@
+timestamp=[2022-09-15 10:41:59], mode=WORKBENCH_START, duration=0:00:11.454, duration_ms=11454, data={}
+timestamp=[2022-09-15 10:42:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.998, duration_ms=998, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2022-09-15 10:42:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:05.380, duration_ms=5380, data={}
+timestamp=[2022-09-15 10:44:13], mode=PLATFORM_CREATION, duration=0:00:31.404, duration_ms=31404, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2022-09-15 10:45:03], mode=APP_CREATION, duration=0:00:14.379, duration_ms=14379, data={name=xadcps_polled_printf_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_xadc_plat, application_type=application}
+timestamp=[2022-09-15 10:48:33], mode=PLATFORM_GENERATION, duration=0:02:36.839, duration_ms=156839, data={name=axi_xadc_plat}
+timestamp=[2022-09-15 10:48:42], mode=BUILD, duration=0:00:08.928, duration_ms=8928, data={name=xadcps_polled_printf_example_1, configuration=Debug, clean_build=false}
+timestamp=[2022-09-15 10:49:09], mode=BUILD, duration=0:00:25.633, duration_ms=25633, data={name=xadcps_polled_printf_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-15 10:53:16], mode=APP_CREATION, duration=0:00:13.936, duration_ms=13936, data={name=xuartps_hello_world_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_xadc_plat, application_type=application}
+timestamp=[2022-09-15 10:56:42], mode=APP_CREATION, duration=0:00:13.569, duration_ms=13569, data={name=xsysmon_polled_printf_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_xadc_plat, application_type=application}
+timestamp=[2022-09-15 10:57:37], mode=BUILD, duration=0:00:08.013, duration_ms=8013, data={name=xsysmon_polled_printf_example_1, configuration=Debug, clean_build=false}
+timestamp=[2022-09-15 10:58:08], mode=BUILD, duration=0:00:28.875, duration_ms=28875, data={name=xsysmon_polled_printf_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-15 11:58:55], mode=WORKBENCH_START, duration=0:00:24.643, duration_ms=24643, data={}
+timestamp=[2022-09-15 11:58:57], mode=WORKBENCH_UI_INIT, duration=0:00:02.677, duration_ms=2677, data={editors_count=6, platform_editors_count=2, projects_count=6, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,axi_xadc_plat,xadcps_polled_printf_example_1,xadcps_polled_printf_example_1_system,xsysmon_polled_printf_example_1,xsysmon_polled_printf_example_1_system}
+timestamp=[2022-09-15 11:59:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.104, duration_ms=104, data={}
+timestamp=[2022-09-21 15:26:15], mode=WORKBENCH_START, duration=0:00:22.932, duration_ms=22932, data={}
+timestamp=[2022-09-21 15:26:17], mode=WORKBENCH_UI_INIT, duration=0:00:02.050, duration_ms=2050, data={editors_count=6, platform_editors_count=2, projects_count=6, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,axi_xadc_plat,xadcps_polled_printf_example_1,xadcps_polled_printf_example_1_system,xsysmon_polled_printf_example_1,xsysmon_polled_printf_example_1_system}
+timestamp=[2022-09-21 15:26:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.243, duration_ms=243, data={}
+timestamp=[2022-09-21 15:30:31], mode=PLATFORM_CREATION, duration=0:00:19.744, duration_ms=19744, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2022-09-21 15:32:20], mode=APP_CREATION, duration=0:00:09.857, duration_ms=9857, data={name=xadcps_polled_printf_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_xadc_proj, application_type=application}
+timestamp=[2022-09-21 15:57:05], mode=PLATFORM_GENERATION, duration=0:01:52.636, duration_ms=112636, data={name=axi_xadc_proj}
+timestamp=[2022-09-21 15:57:14], mode=BUILD, duration=0:00:08.736, duration_ms=8736, data={name=xadcps_polled_printf_example_1, configuration=Debug, clean_build=false}
+timestamp=[2022-09-21 15:57:33], mode=BUILD, duration=0:00:17.208, duration_ms=17208, data={name=xadcps_polled_printf_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-21 16:08:50], mode=APP_CREATION, duration=0:00:08.570, duration_ms=8570, data={name=xsysmon_polled_printf_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_xadc_proj, application_type=application}
+timestamp=[2022-09-21 16:10:42], mode=BUILD, duration=0:00:05.003, duration_ms=5003, data={name=xsysmon_polled_printf_example_1, configuration=Debug, clean_build=false}
+timestamp=[2022-09-21 16:10:57], mode=BUILD, duration=0:00:13.508, duration_ms=13508, data={name=xsysmon_polled_printf_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-21 16:12:41], mode=APP_CREATION, duration=0:00:08.343, duration_ms=8343, data={name=xadc_demo, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_xadc_proj, application_type=application}
+timestamp=[2022-09-21 16:32:07], mode=BUILD, duration=0:00:06.084, duration_ms=6084, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-21 16:32:16], mode=BUILD, duration=0:00:06.922, duration_ms=6922, data={name=xadc_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-21 16:37:14], mode=BUILD, duration=0:00:01.398, duration_ms=1398, data={name=xadc_demo, configuration=Debug, clean_build=true}
+timestamp=[2022-09-21 16:37:20], mode=BUILD, duration=0:00:05.408, duration_ms=5408, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-21 16:37:39], mode=BUILD, duration=0:00:16.367, duration_ms=16367, data={name=xadc_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:02:43], mode=BUILD, duration=0:00:09.291, duration_ms=9291, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:03:06], mode=BUILD, duration=0:00:20.647, duration_ms=20647, data={name=xadc_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:05:03], mode=BUILD, duration=0:00:05.703, duration_ms=5703, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:05:18], mode=BUILD, duration=0:00:13.775, duration_ms=13775, data={name=xadc_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:32:16], mode=BUILD, duration=0:00:03.067, duration_ms=3067, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:32:31], mode=BUILD, duration=0:00:13.584, duration_ms=13584, data={name=xadc_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:33:38], mode=BUILD, duration=0:00:06.592, duration_ms=6592, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:33:54], mode=BUILD, duration=0:00:14.209, duration_ms=14209, data={name=xadc_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:34:46], mode=BUILD, duration=0:00:05.404, duration_ms=5404, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:35:01], mode=BUILD, duration=0:00:13.787, duration_ms=13787, data={name=xadc_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:36:05], mode=BUILD, duration=0:00:05.782, duration_ms=5782, data={name=xadc_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-09-22 11:36:21], mode=BUILD, duration=0:00:14.122, duration_ms=14122, data={name=xadc_demo_system, configuration=Debug, clean_build=false}

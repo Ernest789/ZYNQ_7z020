@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="xsysmon_polled_printf_example_1" location="E:/ZYNQ_7z020/axi_xadc/vitiss/xsysmon_polled_printf_example_1" platform="E:/ZYNQ_7z020/axi_xadc/vitiss/axi_xadc_proj/export/axi_xadc_proj/axi_xadc_proj.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="xsysmon_polled_printf_example_1_system" sysConfig="axi_xadc_proj" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="60fc68c28638f763b736a4701a85af21">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1696376389">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1677544570">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

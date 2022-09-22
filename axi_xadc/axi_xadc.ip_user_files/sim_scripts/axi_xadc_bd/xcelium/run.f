@@ -1,0 +1,86 @@
+-makelib xcelium_lib/xilinx_vip -sv \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
+-endlib
+-makelib xcelium_lib/xpm -sv \
+  "D:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "D:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+-endlib
+-makelib xcelium_lib/xpm \
+  "D:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
+-makelib xcelium_lib/axi_infrastructure_v1_1_0 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_vip_v1_1_8 -sv \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/94c3/hdl/axi_vip_v1_1_vl_rfs.sv" \
+-endlib
+-makelib xcelium_lib/processing_system7_vip_v1_0_10 -sv \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/34f8/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_processing_system7_0_0/sim/axi_xadc_bd_processing_system7_0_0.v" \
+  "../../../bd/axi_xadc_bd/sim/axi_xadc_bd.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/proc_common_v3_30_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_conv_funs_pkg.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/proc_common_v3_30_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_proc_common_pkg.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/proc_common_v3_30_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_ipif_pkg.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/proc_common_v3_30_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_family_support.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/proc_common_v3_30_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_family.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/proc_common_v3_30_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_soft_reset.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/proc_common_v3_30_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_pselect_f.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/axi_lite_ipif_v1_01_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_address_decoder.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/axi_lite_ipif_v1_01_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_slave_attachment.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/interrupt_control_v2_01_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_interrupt_control.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/axi_lite_ipif_v1_01_a/hdl/src/vhdl/axi_xadc_bd_xadc_wiz_0_1_axi_lite_ipif.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/axi_xadc_bd_xadc_wiz_0_1_xadc_core_drp.vhd" \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/axi_xadc_bd_xadc_wiz_0_1_axi_xadc.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_xadc_wiz_0_1/axi_xadc_bd_xadc_wiz_0_1.v" \
+-endlib
+-makelib xcelium_lib/generic_baseblocks_v2_1_0 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/fifo_generator_v13_2_5 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
+-endlib
+-makelib xcelium_lib/fifo_generator_v13_2_5 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/276e/hdl/fifo_generator_v13_2_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/fifo_generator_v13_2_5 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_data_fifo_v2_1_21 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/54c0/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_register_slice_v2_1_22 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_protocol_converter_v2_1_22 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/5cee/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_auto_pc_1/sim/axi_xadc_bd_auto_pc_1.v" \
+-endlib
+-makelib xcelium_lib/lib_cdc_v1_0_2 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/proc_sys_reset_v5_0_13 \
+  "../../../../axi_xadc.gen/sources_1/bd/axi_xadc_bd/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/axi_xadc_bd/ip/axi_xadc_bd_rst_ps7_0_50M_1/sim/axi_xadc_bd_rst_ps7_0_50M_1.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  glbl.v
+-endlib
+
