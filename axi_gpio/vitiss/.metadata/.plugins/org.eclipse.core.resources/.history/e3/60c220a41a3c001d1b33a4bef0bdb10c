@@ -1,0 +1,43 @@
+#include <iostream>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xstatus.h"
+#include "xil_printf.h"
+
+// LED address
+#define LED_ALL_HIGH  0x0F
+#define LED_ALL_LOW  0x00
+// gpio id (find it in xparameters.h)
+#define GPIO_DEVICE_ID  XPAR_AXI_GPIO_0_DEVICE_ID
+// channel SLELECT (2 input   1 output)
+#define CHANNEL_SELECT 1
+// pin mode (channel input or output)
+#define PIN_DIRECTION 0x0
+
+int main()
+{
+	// instantiate a gpio device
+	XGpio Gpio;
+	// initialize the gpio device
+	int status = XST_SUCCESS;
+	status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+	if(status == XST_FAILURE)
+	{
+		std::cout << "GPIO device initialization failure!\r\n" << std::endl;
+	}
+	std::cout << "Looking at the LED on Board!\n" << std::endl;
+	// set the pin direction of signals
+	XGpio_SetDataDirection(&Gpio, CHANNEL_SELECT, PIN_DIRECTION);
+	// output my set of pin direction
+	xil_printf("PIN direction set is :0x%x \n", XGpio_GetDataDirection(&Gpio, CHANNEL_SELECT));
+	// lighting all led
+	XGpio_DiscreteWrite(&Gpio, CHANNEL_SELECT, LED_ALL_LOW);
+	// XGpio_DiscreteClear(&Gpio, CHANNEL_SELECT, LED_ALL_LOW);
+	// wait for a bit
+	for(int i=0; i<10000000; i++);
+	// Turning off all led
+	XGpio_DiscreteWrite(&Gpio, CHANNEL_SELECT, LED_ALL_HIGH);
+	// finishing the test
+	std::cout << "GPIO test successful!!\n" << std::endl;
+	return 0;
+}

@@ -1,0 +1,335 @@
+!SESSION 2022-09-24 20:19:53.483 -----------------------------------------------
+eclipse.buildId=2020.2
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file E:\ZYNQ_7z020\axi_gpio\vitiss\.metadata\.bak_0.log
+Created Time: 2022-09-24 23:14:07.523
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.524
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.533
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.536
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.557
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.557
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.565
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.566
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.585
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.586
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.593
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.594
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.614
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.615
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.636
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.637
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.639
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.640
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.656
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.657
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.730
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:07.731
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.742
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.766
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.773
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.774
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.794
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.796
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.833
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:10.834
+!MESSAGE XSCT Command: [fpga -file E:/ZYNQ_7z020/axi_gpio/vitiss/axi_gpio_test/_ide/bitstream/bd_axi_gpio_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.259
+!MESSAGE XSCT command with result: [fpga -file E:/ZYNQ_7z020/axi_gpio/vitiss/axi_gpio_test/_ide/bitstream/bd_axi_gpio_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.286
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.303
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.304
+!MESSAGE XSCT Command: [loadhw -hw E:/ZYNQ_7z020/axi_gpio/vitiss/bd_axi_gpio_wrapper/export/bd_axi_gpio_wrapper/hw/bd_axi_gpio_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.321
+!MESSAGE XSCT command with result: [loadhw -hw E:/ZYNQ_7z020/axi_gpio/vitiss/bd_axi_gpio_wrapper/export/bd_axi_gpio_wrapper/hw/bd_axi_gpio_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, bd_axi_gpio_wrapper_2]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.322
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.335
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.336
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.346
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.347
+!MESSAGE XSCT Command: [source E:/ZYNQ_7z020/axi_gpio/vitiss/axi_gpio_test/_ide/psinit/ps7_init.tcl], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.350
+!MESSAGE XSCT command with result: [source E:/ZYNQ_7z020/axi_gpio/vitiss/axi_gpio_test/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.351
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.615
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.616
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.650
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.650
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.661
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:14.662
+!MESSAGE XSCT Command: [dow E:/ZYNQ_7z020/axi_gpio/vitiss/axi_gpio_test/Debug/axi_gpio_test.elf], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:16.279
+!MESSAGE XSCT command with result: [dow E:/ZYNQ_7z020/axi_gpio/vitiss/axi_gpio_test/Debug/axi_gpio_test.elf], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:16.280
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:16.332
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:16.429
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:16.441
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:16.443
+!MESSAGE XSCT Command: [con], Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY org.eclipse.cdt.debug.ui.memory.floatingpoint.FPRendering 4 5013 2022-09-24 23:14:16.444
+!MESSAGE Failure in retrieving base address.
+!STACK 1
+org.eclipse.debug.core.DebugException: Debugger request failed.
+TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+	at org.eclipse.tcf.internal.debug.ui.model.TCFDebugTask.getD(TCFDebugTask.java:51)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFMemoryBlock.getBigBaseAddress(TCFMemoryBlock.java:396)
+	at org.eclipse.cdt.debug.ui.memory.floatingpoint.FPRendering.init(FPRendering.java:288)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFMemoryBlock$9.run(TCFMemoryBlock.java:809)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3897)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3527)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.tcf.core.ErrorReport: TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+	at org.eclipse.tcf.core.Command.toError(Command.java:267)
+	at org.eclipse.tcf.core.Command.toError(Command.java:252)
+	at org.eclipse.tcf.internal.services.remote.ExpressionsProxy$2.done(ExpressionsProxy.java:185)
+	at org.eclipse.tcf.core.Command.result(Command.java:122)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1128)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+!SUBENTRY 1 org.eclipse.tcf.debug.ui 4 5012 2022-09-24 23:14:16.453
+!MESSAGE Debugger request failed.
+TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+!STACK 0
+org.eclipse.tcf.core.ErrorReport: TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+	at org.eclipse.tcf.core.Command.toError(Command.java:267)
+	at org.eclipse.tcf.core.Command.toError(Command.java:252)
+	at org.eclipse.tcf.internal.services.remote.ExpressionsProxy$2.done(ExpressionsProxy.java:185)
+	at org.eclipse.tcf.core.Command.result(Command.java:122)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1128)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.cdt.debug.ui.memory.traditional.TraditionalRendering 4 5013 2022-09-24 23:14:16.462
+!MESSAGE Failure in retrieving base address.
+!STACK 1
+org.eclipse.debug.core.DebugException: Debugger request failed.
+TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+	at org.eclipse.tcf.internal.debug.ui.model.TCFDebugTask.getD(TCFDebugTask.java:51)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFMemoryBlock.getBigBaseAddress(TCFMemoryBlock.java:396)
+	at org.eclipse.cdt.debug.ui.memory.traditional.TraditionalRendering.init(TraditionalRendering.java:333)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFMemoryBlock$9.run(TCFMemoryBlock.java:809)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3897)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3527)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:80)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.tcf.core.ErrorReport: TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+	at org.eclipse.tcf.core.Command.toError(Command.java:267)
+	at org.eclipse.tcf.core.Command.toError(Command.java:252)
+	at org.eclipse.tcf.internal.services.remote.ExpressionsProxy$2.done(ExpressionsProxy.java:185)
+	at org.eclipse.tcf.core.Command.result(Command.java:122)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1128)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+!SUBENTRY 1 org.eclipse.tcf.debug.ui 4 5012 2022-09-24 23:14:16.463
+!MESSAGE Debugger request failed.
+TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+!STACK 0
+org.eclipse.tcf.core.ErrorReport: TCF error report:
+  Command: Expressions create "JTAG-jsn-JTAG-HS1-210512180081-4ba00477-0.0", null, "LedBits"
+  Time: 2022-09-24 23:14:16.443
+  Error text: At col 7: Undefined identifier 'LedBits'. Invalid expression
+  Error code: 18
+
+	at org.eclipse.tcf.core.Command.toError(Command.java:267)
+	at org.eclipse.tcf.core.Command.toError(Command.java:252)
+	at org.eclipse.tcf.internal.services.remote.ExpressionsProxy$2.done(ExpressionsProxy.java:185)
+	at org.eclipse.tcf.core.Command.result(Command.java:122)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1128)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:14:16.476
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_axi_gpio_test_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:15:28.813
+!MESSAGE XSCT Command: [disconnect tcfchan#20], Thread: Thread-1517
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-24 23:15:28.818
+!MESSAGE XSCT command with result: [disconnect tcfchan#20], Result: [null, ]. Thread: Thread-1517

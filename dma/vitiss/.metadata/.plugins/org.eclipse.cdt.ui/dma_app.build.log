@@ -1,0 +1,25 @@
+15:20:27 **** Incremental Build of configuration Debug for project dma_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/dma_test.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dma_test.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/sw/dma_plat/standalone_domain/bspinclude/include -MMD -MP -MF"src/dma_test.d" -MT"src/dma_test.o" -o "src/dma_test.o" "../src/dma_test.cpp"
+'Finished building: ../src/dma_test.cpp'
+' '
+'Building target: dma_app.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LE:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/sw/dma_plat/standalone_domain/bsplib/lib -o "dma_app.elf"  ./src/dma_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: dma_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size dma_app.elf  |tee "dma_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 557503	   2896	  29132	 589531	  8fedb	dma_app.elf
+'Finished building: dma_app.elf.size'
+' '
+
+15:20:34 Build Finished (took 7s.629ms)
+

@@ -1,0 +1,65 @@
+#include <iostream>
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xaxidma.h"
+
+#define DMA_DEV_ID    XPAR_AXI_DMA_0_DEVICE_ID
+
+#define TX_BUFFER_BASE		0x00000000
+#define RX_BUFFER_BASE		0x00000100  // size 256
+#define PACKET_LEN		32
+
+
+
+int main()
+{
+	int status = XST_SUCCESS;
+	std::cout << "OK!" << std::endl;
+
+	// Instantiate a DMA device
+	XAxiDma axiDma;
+	// Looking for device
+	XAxiDma_Config *cfgPtr;
+	cfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
+	if(cfgPtr == NULL)
+	{
+		std::cout << "Can't find the DMA device configuration!" << std::endl;
+	}
+	// initialize the DMA device
+	status = XAxiDma_CfgInitialize(&axiDma, cfgPtr);
+	if(status == XST_FAILURE)
+	{
+		std::cout << "Initializing the DMA device failure!" << std::endl;
+	}
+	// Disable the interrupt
+	XAxiDma_IntrDisable(&axiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&axiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
+	// send cache
+	u8 *TxBufferPtr;
+	// generate the data
+	TxBufferPtr = (u8 *)TX_BUFFER_BASE;
+	for(int index = 0; index < PACKET_LEN; index++)
+	{
+		TxBufferPtr[index] = 0x01;
+	}
+	// receive cache
+	u8 *RxBufferPtr;
+	// Configure the cache
+	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, PACKET_LEN);
+	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, PACKET_LEN);
+	// Send the data to DDR
+	status = XAxiDma_SimpleTransfer(&axiDma,(UINTPTR) TxBufferPtr, PACKET_LEN, XAXIDMA_DMA_TO_DEVICE);
+	if (status == XST_FAILURE)
+	{
+		std::cout << "Send the data to DDR failure!" << std::endl;
+	}
+	// Get the data from DDR
+	status = XAxiDma_SimpleTransfer(&axiDma,(UINTPTR) TxBufferPtr, PACKET_LEN, XAXIDMA_DEVICE_TO_DMA);
+	if (status == XST_FAILURE)
+	{
+		std::cout << "Get the data from DDR failure!" << std::endl;
+	}
+
+	std::cout << "OK!" << std::endl;
+	return 0;
+}

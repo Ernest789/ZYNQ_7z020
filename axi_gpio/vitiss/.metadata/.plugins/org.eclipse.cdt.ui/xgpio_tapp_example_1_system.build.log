@@ -1,0 +1,10 @@
+11:56:18 **** Incremental Build of configuration Debug for project xgpio_tapp_example_1_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 1476 E:/ZYNQ_7z020/axi_gpio/vitiss/bd_axi_gpio_wrapper/export/bd_axi_gpio_wrapper/bd_axi_gpio_wrapper.xpfm standalone_ps7_cortexa9_0 E:/ZYNQ_7z020/axi_gpio/vitiss/xgpio_tapp_example_1_system/Debug/system.bif
+sdcard_gen --xpfm E:/ZYNQ_7z020/axi_gpio/vitiss/bd_axi_gpio_wrapper/export/bd_axi_gpio_wrapper/bd_axi_gpio_wrapper.xpfm --sys_config bd_axi_gpio_wrapper --bif E:/ZYNQ_7z020/axi_gpio/vitiss/xgpio_tapp_example_1_system/Debug/system.bif --bitstream E:/ZYNQ_7z020/axi_gpio/vitiss/xgpio_tapp_example_1/_ide/bitstream/bd_axi_gpio_wrapper.bit --elf E:/ZYNQ_7z020/axi_gpio/vitiss/xgpio_tapp_example_1/Debug/xgpio_tapp_example_1.elf,ps7_cortexa9_0
+creating BOOT.BIN using E:/ZYNQ_7z020/axi_gpio/vitiss/xgpio_tapp_example_1/_ide/bitstream/bd_axi_gpio_wrapper.bit
+Running D:/Xilinx/Vitis/2020.2/bin/bootgen  -image E:/ZYNQ_7z020/axi_gpio/vitiss/xgpio_tapp_example_1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+11:56:31 Build Finished (took 13s.373ms)
+

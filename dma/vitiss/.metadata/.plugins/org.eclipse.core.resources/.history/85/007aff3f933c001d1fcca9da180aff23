@@ -1,0 +1,33 @@
+#include <iostream>
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xaxidma.h"
+
+#define DMA_DEV_ID    XPAR_AXI_DMA_0_DEVICE_ID
+
+
+int main()
+{
+	// istantiate a DMA device
+	XAxiDma axiDma;
+	// Looking for device
+	XAxiDma_Config *cfgPtr;
+	cfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
+	if(cfgPtr == NULL)
+	{
+		std::cout << "Can't find the DMA device configuration!" << std::endl;
+	}
+	// initialize the DMA device
+	status = XAxiDma_CfgInitialize();
+	if(status == XST_FAILURE)
+	{
+		std::cout << "Initializing the DMA device failure!" << std::endl;
+	}
+	// clear the cache
+
+	int status = XST_SUCCESS;
+
+
+	std::cout << "OK!" << std::endl;
+	return 0;
+}

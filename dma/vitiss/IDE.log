@@ -1,0 +1,622 @@
+10:58:34 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\ZYNQ_7z020\dma\vitiss\temp_xsdb_launch_script.tcl
+10:58:34 INFO  : Registering command handlers for Vitis TCF services
+10:58:39 INFO  : Platform repository initialization has completed.
+10:58:40 INFO  : XSCT server has started successfully.
+10:58:40 INFO  : plnx-install-location is set to ''
+10:58:40 INFO  : Successfully done setting XSCT server connection channel  
+10:58:44 INFO  : Successfully done setting workspace for the tool. 
+10:58:44 INFO  : Successfully done query RDI_DATADIR 
+10:59:43 INFO  : Result from executing command 'getProjects': dma_plat
+10:59:43 INFO  : Result from executing command 'getPlatforms': 
+11:06:01 INFO  : Example project xaxidma_example_simple_poll_1 has been created successfully.
+11:08:03 INFO  : Result from executing command 'getProjects': dma_plat
+11:08:03 INFO  : Result from executing command 'getPlatforms': dma_plat|E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/dma_plat.xpfm
+11:08:04 INFO  : Checking for BSP changes to sync application flags for project 'xaxidma_example_simple_poll_1'...
+11:10:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:10:58 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+11:10:58 INFO  : 'jtag frequency' command is executed.
+11:10:58 INFO  : Context for 'APU' is selected.
+11:10:58 INFO  : System reset is completed.
+11:11:01 INFO  : 'after 3000' command is executed.
+11:11:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+11:11:05 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit"
+11:11:05 INFO  : Context for 'APU' is selected.
+11:11:05 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+11:11:05 INFO  : 'configparams force-mem-access 1' command is executed.
+11:11:05 INFO  : Context for 'APU' is selected.
+11:11:05 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl' is done.
+11:11:05 INFO  : 'ps7_init' command is executed.
+11:11:05 INFO  : 'ps7_post_config' command is executed.
+11:11:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:11:05 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:11:05 INFO  : 'configparams force-mem-access 0' command is executed.
+11:11:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:11:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:11:06 INFO  : 'con' command is executed.
+11:11:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:11:06 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\xaxidma_example_simple_poll_1_system\_ide\scripts\systemdebugger_xaxidma_example_simple_poll_1_system_standalone.tcl'
+11:16:03 INFO  : Disconnected from the channel tcfchan#3.
+11:16:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:16:04 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+11:16:04 INFO  : 'jtag frequency' command is executed.
+11:16:04 INFO  : Context for 'APU' is selected.
+11:16:04 INFO  : System reset is completed.
+11:16:07 INFO  : 'after 3000' command is executed.
+11:16:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+11:16:10 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit"
+11:16:10 INFO  : Context for 'APU' is selected.
+11:16:10 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+11:16:10 INFO  : 'configparams force-mem-access 1' command is executed.
+11:16:10 INFO  : Context for 'APU' is selected.
+11:16:10 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl' is done.
+11:16:11 INFO  : 'ps7_init' command is executed.
+11:16:11 INFO  : 'ps7_post_config' command is executed.
+11:16:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:11 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:16:11 INFO  : 'configparams force-mem-access 0' command is executed.
+11:16:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:16:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:16:11 INFO  : 'con' command is executed.
+11:16:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:16:11 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\xaxidma_example_simple_poll_1_system\_ide\scripts\systemdebugger_xaxidma_example_simple_poll_1_system_standalone.tcl'
+11:26:03 INFO  : Disconnected from the channel tcfchan#4.
+11:26:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:26:04 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+11:26:04 INFO  : 'jtag frequency' command is executed.
+11:26:04 INFO  : Context for 'APU' is selected.
+11:26:04 INFO  : System reset is completed.
+11:26:07 INFO  : 'after 3000' command is executed.
+11:26:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+11:26:10 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit"
+11:26:10 INFO  : Context for 'APU' is selected.
+11:26:10 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+11:26:10 INFO  : 'configparams force-mem-access 1' command is executed.
+11:26:10 INFO  : Context for 'APU' is selected.
+11:26:10 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl' is done.
+11:26:11 INFO  : 'ps7_init' command is executed.
+11:26:11 INFO  : 'ps7_post_config' command is executed.
+11:26:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:26:11 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:26:11 INFO  : 'configparams force-mem-access 0' command is executed.
+11:26:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:26:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:26:11 INFO  : 'con' command is executed.
+11:26:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:26:11 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\xaxidma_example_simple_poll_1_system\_ide\scripts\systemdebugger_xaxidma_example_simple_poll_1_system_standalone.tcl'
+11:56:23 INFO  : Disconnected from the channel tcfchan#5.
+11:56:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+11:56:24 INFO  : 'jtag frequency' command is executed.
+11:56:24 INFO  : Context for 'APU' is selected.
+11:56:24 INFO  : System reset is completed.
+11:56:27 INFO  : 'after 3000' command is executed.
+11:56:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+11:56:30 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit"
+11:56:30 INFO  : Context for 'APU' is selected.
+11:56:30 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+11:56:30 INFO  : 'configparams force-mem-access 1' command is executed.
+11:56:30 INFO  : Context for 'APU' is selected.
+11:56:30 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl' is done.
+11:56:31 INFO  : 'ps7_init' command is executed.
+11:56:31 INFO  : 'ps7_post_config' command is executed.
+11:56:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:31 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:56:31 INFO  : 'configparams force-mem-access 0' command is executed.
+11:56:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:56:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:31 INFO  : 'con' command is executed.
+11:56:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:56:31 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\xaxidma_example_simple_poll_1_system\_ide\scripts\systemdebugger_xaxidma_example_simple_poll_1_system_standalone.tcl'
+12:00:09 INFO  : Checking for BSP changes to sync application flags for project 'xaxidma_example_simple_poll_1'...
+12:00:59 INFO  : Disconnected from the channel tcfchan#6.
+12:00:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:00:59 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:00:59 INFO  : 'jtag frequency' command is executed.
+12:00:59 INFO  : Context for 'APU' is selected.
+12:01:00 INFO  : System reset is completed.
+12:01:03 INFO  : 'after 3000' command is executed.
+12:01:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+12:01:06 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit"
+12:01:06 INFO  : Context for 'APU' is selected.
+12:01:06 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+12:01:06 INFO  : 'configparams force-mem-access 1' command is executed.
+12:01:06 INFO  : Context for 'APU' is selected.
+12:01:06 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl' is done.
+12:01:06 INFO  : 'ps7_init' command is executed.
+12:01:06 INFO  : 'ps7_post_config' command is executed.
+12:01:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:07 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:01:07 INFO  : 'configparams force-mem-access 0' command is executed.
+12:01:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:01:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:01:07 INFO  : 'con' command is executed.
+12:01:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:01:07 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\xaxidma_example_simple_poll_1_system\_ide\scripts\systemdebugger_xaxidma_example_simple_poll_1_system_standalone.tcl'
+12:32:35 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+12:34:54 INFO  : Disconnected from the channel tcfchan#8.
+12:34:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:34:56 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:34:56 INFO  : 'jtag frequency' command is executed.
+12:34:56 INFO  : Context for 'APU' is selected.
+12:34:56 INFO  : System reset is completed.
+12:34:59 INFO  : 'after 3000' command is executed.
+12:34:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+12:35:02 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+12:35:02 INFO  : Context for 'APU' is selected.
+12:35:02 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+12:35:02 INFO  : 'configparams force-mem-access 1' command is executed.
+12:35:02 INFO  : Context for 'APU' is selected.
+12:35:02 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+12:35:03 INFO  : 'ps7_init' command is executed.
+12:35:03 INFO  : 'ps7_post_config' command is executed.
+12:35:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:35:04 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:35:05 INFO  : 'configparams force-mem-access 0' command is executed.
+12:35:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:35:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:35:05 INFO  : 'con' command is executed.
+12:35:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:35:05 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+14:16:34 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+14:17:59 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+14:19:21 INFO  : Disconnected from the channel tcfchan#10.
+14:19:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:21 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:19:21 INFO  : 'jtag frequency' command is executed.
+14:19:21 INFO  : Context for 'APU' is selected.
+14:19:21 INFO  : System reset is completed.
+14:19:24 INFO  : 'after 3000' command is executed.
+14:19:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+14:19:28 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+14:19:28 INFO  : Context for 'APU' is selected.
+14:19:28 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+14:19:28 INFO  : 'configparams force-mem-access 1' command is executed.
+14:19:28 INFO  : Context for 'APU' is selected.
+14:19:28 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+14:19:30 INFO  : 'ps7_init' command is executed.
+14:19:30 INFO  : 'ps7_post_config' command is executed.
+14:19:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:19:33 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:19:33 INFO  : 'configparams force-mem-access 0' command is executed.
+14:19:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:19:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:19:33 INFO  : 'con' command is executed.
+14:19:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:19:33 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+14:24:20 INFO  : Disconnected from the channel tcfchan#13.
+14:24:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:24:20 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:24:20 INFO  : 'jtag frequency' command is executed.
+14:24:20 INFO  : Context for 'APU' is selected.
+14:24:20 INFO  : System reset is completed.
+14:24:23 INFO  : 'after 3000' command is executed.
+14:24:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+14:24:27 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+14:24:27 INFO  : Context for 'APU' is selected.
+14:24:27 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+14:24:27 INFO  : 'configparams force-mem-access 1' command is executed.
+14:24:27 INFO  : Context for 'APU' is selected.
+14:24:27 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+14:24:28 INFO  : 'ps7_init' command is executed.
+14:24:29 INFO  : 'ps7_post_config' command is executed.
+14:24:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:32 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:24:32 INFO  : 'configparams force-mem-access 0' command is executed.
+14:24:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:24:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:32 INFO  : 'con' command is executed.
+14:24:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:24:32 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+14:25:00 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+14:27:16 INFO  : Disconnected from the channel tcfchan#14.
+14:27:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:27:17 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:27:17 INFO  : 'jtag frequency' command is executed.
+14:27:17 INFO  : Context for 'APU' is selected.
+14:27:17 INFO  : System reset is completed.
+14:27:20 INFO  : 'after 3000' command is executed.
+14:27:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+14:27:24 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+14:27:24 INFO  : Context for 'APU' is selected.
+14:27:24 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+14:27:24 INFO  : 'configparams force-mem-access 1' command is executed.
+14:27:24 INFO  : Context for 'APU' is selected.
+14:27:24 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+14:27:24 INFO  : 'ps7_init' command is executed.
+14:27:24 INFO  : 'ps7_post_config' command is executed.
+14:27:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:27:26 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:27:26 INFO  : 'configparams force-mem-access 0' command is executed.
+14:27:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:27:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:27:26 INFO  : 'con' command is executed.
+14:27:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:27:26 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+14:35:21 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+14:38:56 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+14:43:31 INFO  : Disconnected from the channel tcfchan#16.
+14:43:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:43:31 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:43:31 INFO  : 'jtag frequency' command is executed.
+14:43:31 INFO  : Context for 'APU' is selected.
+14:43:31 INFO  : System reset is completed.
+14:43:34 INFO  : 'after 3000' command is executed.
+14:43:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+14:43:38 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+14:43:38 INFO  : Context for 'APU' is selected.
+14:43:38 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+14:43:38 INFO  : 'configparams force-mem-access 1' command is executed.
+14:43:38 INFO  : Context for 'APU' is selected.
+14:43:38 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+14:43:38 INFO  : 'ps7_init' command is executed.
+14:43:38 INFO  : 'ps7_post_config' command is executed.
+14:43:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:43:40 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:43:40 INFO  : 'configparams force-mem-access 0' command is executed.
+14:43:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:43:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:43:40 INFO  : 'con' command is executed.
+14:43:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:43:40 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+14:52:19 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+14:52:53 INFO  : Disconnected from the channel tcfchan#19.
+14:52:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:52:54 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:52:54 INFO  : 'jtag frequency' command is executed.
+14:52:54 INFO  : Context for 'APU' is selected.
+14:52:54 INFO  : System reset is completed.
+14:52:57 INFO  : 'after 3000' command is executed.
+14:52:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+14:53:00 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+14:53:00 INFO  : Context for 'APU' is selected.
+14:53:00 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+14:53:00 INFO  : 'configparams force-mem-access 1' command is executed.
+14:53:00 INFO  : Context for 'APU' is selected.
+14:53:00 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+14:53:01 INFO  : 'ps7_init' command is executed.
+14:53:01 INFO  : 'ps7_post_config' command is executed.
+14:53:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:53:03 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:53:03 INFO  : 'configparams force-mem-access 0' command is executed.
+14:53:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:53:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:53:03 INFO  : 'con' command is executed.
+14:53:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:53:03 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+14:58:47 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+15:00:05 INFO  : Disconnected from the channel tcfchan#21.
+15:00:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:00:06 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:00:06 INFO  : 'jtag frequency' command is executed.
+15:00:06 INFO  : Context for 'APU' is selected.
+15:00:06 INFO  : System reset is completed.
+15:00:09 INFO  : 'after 3000' command is executed.
+15:00:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+15:00:12 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+15:00:12 INFO  : Context for 'APU' is selected.
+15:00:12 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+15:00:12 INFO  : 'configparams force-mem-access 1' command is executed.
+15:00:12 INFO  : Context for 'APU' is selected.
+15:00:12 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+15:00:13 INFO  : 'ps7_init' command is executed.
+15:00:13 INFO  : 'ps7_post_config' command is executed.
+15:00:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:00:15 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:00:15 INFO  : 'configparams force-mem-access 0' command is executed.
+15:00:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:00:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:00:15 INFO  : 'con' command is executed.
+15:00:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:00:15 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+15:20:27 INFO  : Checking for BSP changes to sync application flags for project 'dma_app'...
+15:21:26 INFO  : Disconnected from the channel tcfchan#23.
+15:21:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:21:26 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:21:26 INFO  : 'jtag frequency' command is executed.
+15:21:26 INFO  : Context for 'APU' is selected.
+15:21:26 INFO  : System reset is completed.
+15:21:29 INFO  : 'after 3000' command is executed.
+15:21:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+15:21:33 INFO  : Device configured successfully with "E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit"
+15:21:33 INFO  : Context for 'APU' is selected.
+15:21:33 INFO  : Hardware design and registers information is loaded from 'E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa'.
+15:21:33 INFO  : 'configparams force-mem-access 1' command is executed.
+15:21:33 INFO  : Context for 'APU' is selected.
+15:21:33 INFO  : Sourcing of 'E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl' is done.
+15:21:33 INFO  : 'ps7_init' command is executed.
+15:21:34 INFO  : 'ps7_post_config' command is executed.
+15:21:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:21:35 INFO  : The application 'E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:21:35 INFO  : 'configparams force-mem-access 0' command is executed.
+15:21:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/bitstream/bd_dma_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/ZYNQ_7z020/dma/vitiss/dma_plat/export/dma_plat/hw/bd_dma_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/ZYNQ_7z020/dma/vitiss/dma_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/ZYNQ_7z020/dma/vitiss/dma_app/Debug/dma_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:21:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:21:36 INFO  : 'con' command is executed.
+15:21:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:21:36 INFO  : Launch script is exported to file 'E:\ZYNQ_7z020\dma\vitiss\dma_app_system\_ide\scripts\systemdebugger_dma_app_system_standalone.tcl'
+15:24:56 INFO  : Disconnected from the channel tcfchan#25.

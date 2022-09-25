@@ -1,0 +1,10 @@
+#include <iostream>
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xaxidma.h"
+
+int main()
+{
+	std::cout << "OK!" << std::endl;
+	return 0;
+}
